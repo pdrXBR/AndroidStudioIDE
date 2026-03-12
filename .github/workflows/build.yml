@@ -46,7 +46,7 @@ jobs:
         run: ./gradlew assembleDebug --no-daemon --stacktrace
 
       - name: Upload Debug APK
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: AndroidIDE-debug-${{ github.run_number }}
           path: app/build/outputs/apk/debug/app-debug.apk
@@ -55,7 +55,7 @@ jobs:
 
       - name: Upload Reports on Failure
         if: failure()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: build-reports-${{ github.run_number }}
           path: |
@@ -113,7 +113,7 @@ jobs:
         run: ./gradlew assembleRelease --no-daemon --stacktrace
 
       - name: Upload Release APK
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: AndroidIDE-release-${{ github.run_number }}
           path: app/build/outputs/apk/release/*.apk

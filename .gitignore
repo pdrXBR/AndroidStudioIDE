@@ -1,0 +1,26 @@
+# Gradle
+.gradle/
+build/
+**/build/
+local.properties
+
+# Android
+*.apk
+*.aab
+*.ap_
+*.dex
+keystore.jks
+keystore.properties
+
+# IDE
+.idea/
+*.iml
+*.iws
+.DS_Store
+Thumbs.db
+
+# Testing
+*.hprof
+
+# Generated
+app/schemas/
